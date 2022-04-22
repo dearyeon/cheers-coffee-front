@@ -1,0 +1,7 @@
+.wrapper {
+  background-color: gray;
+  border: none;
+  height: fit-content;
+  padding: 10px 20px;
+  font-size: 20px;
+}
