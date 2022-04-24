@@ -3,6 +3,7 @@ import Button from "../components/Button";
 
 function Main() {
   const [count, setCount] = React.useState(0);
+
   return (
     <div className="wrapper">
       <div className="container" style={{ background: "lightgray" }}>
