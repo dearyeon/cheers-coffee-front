@@ -15,7 +15,11 @@ function Main() {
             <br />치 ★ 얼 ☆ 쓰 -
           </div>
           <div className="main-content">
-            <div className="main-imgBox" />
+            <img className="cheers-icon" src="img/cheers_test.png" />
+            <div className="main-coffeCount">
+              <img className="coffee-icon" src="img/coffee_test.png" />
+              <div className="main-coffee-count">X {count}</div>
+            </div>
             <Button text="커피로 응원하기" />
           </div>
         </div>

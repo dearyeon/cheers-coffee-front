@@ -50,18 +50,37 @@ a {
   font-weight: 600;
   font-size: 18px; /*반*/
   text-align: center;
+  z-index: 1;
 }
 .main-content {
   display: flex;
+  flex-direction: column;
   height: 400px; /*반*/
   width: 400px; /*반*/
   background-color: white;
   justify-content: center;
+  align-items: center;
 }
-.main-imgBox {
+.main-coffeCount {
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+}
+.cheers-icon {
   display: flex;
   height: 400px; /*반*/
   width: 400px; /*반*/
   position: absolute;
-  background-color: rgba(122, 122, 122, 0.2);
+  z-index: 0;
+}
+.coffee-icon {
+  height: 150px; /*반*/
+  width: 110px; /*반*/
+  z-index: 1;
+}
+.main-coffee-count {
+  align-items: center;
+  display: flex;
+  font-size: 35px;
+  font-weight: 500;
 }
