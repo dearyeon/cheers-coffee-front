@@ -19,7 +19,7 @@ a {
   scroll-behavior: smooth;
   height: 100vh;
   scroll-snap-type: y mandatory;
-  scroll-padding-top: 10px;
+  /*scroll-padding-top: 10px;*/
   overflow-y: scroll;
 }
 .wrapper::-webkit-scrollbar {
@@ -38,16 +38,30 @@ a {
   /*align-items: center;*/
 }
 
-.main-imgboxWrapper {
+.main-contentWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-
-.main-imgbox {
+.main-ment {
+  position: absolute;
+  margin-bottom: 400px; /*반*/
+  font-weight: 600;
+  font-size: 18px; /*반*/
+  text-align: center;
+}
+.main-content {
   display: flex;
-  height: 400px;
-  width: 400px;
+  height: 400px; /*반*/
+  width: 400px; /*반*/
   background-color: white;
   justify-content: center;
+}
+.main-imgBox {
+  display: flex;
+  height: 400px; /*반*/
+  width: 400px; /*반*/
+  position: absolute;
+  background-color: rgba(122, 122, 122, 0.2);
 }
