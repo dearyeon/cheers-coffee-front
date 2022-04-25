@@ -2,7 +2,7 @@ import * as React from "react";
 import Button from "../components/Button";
 
 function Main() {
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = React.useState(1);
 
   return (
     <div className="wrapper">
@@ -16,9 +16,14 @@ function Main() {
           </div>
           <div className="main-content">
             <img className="cheers-icon" src="img/cheers_test.png" />
-            <div className="main-coffeCount">
+            <div className="main-coffeCount1">
               <img className="coffee-icon" src="img/coffee_test.png" />
-              <div className="main-coffee-count">X {count}</div>
+              <div className="main-coffeCount1-text">X {count}</div>
+            </div>
+            <div className="main-coffeCount2">
+              <div className="main-coffeCount2-text">
+                {count}커피 = {0.01 * count}ether
+              </div>
             </div>
             <Button text="커피로 응원하기" />
           </div>

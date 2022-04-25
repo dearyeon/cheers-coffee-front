@@ -61,7 +61,7 @@ a {
   justify-content: center;
   align-items: center;
 }
-.main-coffeCount {
+.main-coffeCount1 {
   display: flex;
   flex-direction: row;
   z-index: 1;
@@ -78,9 +78,15 @@ a {
   width: 110px; /*반*/
   z-index: 1;
 }
-.main-coffee-count {
+.main-coffeCount1-text {
   align-items: center;
   display: flex;
-  font-size: 35px;
+  font-size: 45px;
+  font-weight: 500;
+}
+.main-coffeCount2 {
+  background-color: rgba(180, 180, 180, 0.9);
+}
+.main-coffeCount2-text {
   font-weight: 500;
 }
