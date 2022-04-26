@@ -31,7 +31,9 @@ function Main() {
               <Button text={count} wide />
               <Button text="+" color="pink" icon />
             </div>
-            {/*<Button text="커피로 응원하기" />*/}
+            <div className="main-registerButton">
+              <Button text="커피로 응원하기" wide />
+            </div>
           </div>
         </div>
       </div>

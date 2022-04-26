@@ -103,3 +103,7 @@ a {
   display: flex;
   flex-direction: row;
 }
+.main-registerButton {
+  position: absolute;
+  bottom: 15px;
+}
