@@ -43,14 +43,15 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 .main-ment {
-  position: absolute;
-  margin-bottom: 400px; /*반*/
   font-weight: 600;
   font-size: 18px; /*반*/
   text-align: center;
   z-index: 1;
+  position: absolute;
+  margin-bottom: 400px;
 }
 .main-content {
   display: flex;
@@ -60,6 +61,7 @@ a {
   background-color: white;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .main-coffeCount1 {
   display: flex;
@@ -67,9 +69,8 @@ a {
   z-index: 1;
 }
 .cheers-icon {
-  display: flex;
-  height: 400px; /*반*/
-  width: 400px; /*반*/
+  height: 100%; /*반*/
+  width: 100%; /*반*/
   position: absolute;
   z-index: 0;
 }
