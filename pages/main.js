@@ -4,6 +4,10 @@ import Button from "../components/Button";
 
 function Main() {
   const [count, setCount] = React.useState(1);
+  const calCount = (action) => {
+    if (action == "plus" && count < 100) setCount(count + 1);
+    if (action == "minus" && count > 1) setCount(count - 1);
+  };
 
   return (
     <div className="wrapper">
@@ -23,13 +27,23 @@ function Main() {
             </div>
             <div className="main-coffeCount2">
               <div className="main-coffeCount2-text">
-                {count}커피 = {0.01 * count}ether
+                {count}커피 = {(0.01 * count).toFixed(2)}ether
               </div>
             </div>
             <div className="main-countButton">
-              <Button text="−" color="lightskyblue" icon />
+              <Button
+                text="−"
+                color="lightskyblue"
+                icon
+                onClick={() => calCount("minus")}
+              />
               <Button text={count} wide />
-              <Button text="+" color="pink" icon />
+              <Button
+                text="+"
+                color="pink"
+                icon
+                onClick={() => calCount("plus")}
+              />
             </div>
             <div className="main-registerButton">
               <Button text="커피로 응원하기" wide />
