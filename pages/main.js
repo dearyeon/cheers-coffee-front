@@ -1,3 +1,4 @@
+import { addRequestMeta } from "next/dist/server/request-meta";
 import * as React from "react";
 import Button from "../components/Button";
 
@@ -25,11 +26,17 @@ function Main() {
                 {count}커피 = {0.01 * count}ether
               </div>
             </div>
-            <Button text="커피로 응원하기" />
+            <div className="main-countButton">
+              <Button text="−" color="lightskyblue" icon />
+              <Button text={count} wide />
+              <Button text="+" color="pink" icon />
+            </div>
+            {/*<Button text="커피로 응원하기" />*/}
           </div>
         </div>
       </div>
-      <div className="container">test</div>
+      <div className="container">2페이지</div>
+      <div className="container">3페이지</div>
     </div>
   );
 }

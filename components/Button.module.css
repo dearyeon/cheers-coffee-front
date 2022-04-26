@@ -1,9 +1,20 @@
 .wrapper {
-  background-color: gray;
   border: none;
-  height: fit-content;
-  width: fit-content;
   padding: 10px 20px;
   font-size: 20px; /*반*/
+  background: lightgray;
   z-index: 1;
+}
+.icon {
+  padding: 0px 10px;
+  font-size: 35px;
+}
+.wide {
+  padding: 10px 50px;
+}
+.pink {
+  background-color: pink;
+}
+.lightskyblue {
+  background-color: lightskyblue;
 }

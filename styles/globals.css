@@ -15,6 +15,10 @@ a {
   box-sizing: border-box;
 }
 
+:root {
+  --test: pink;
+}
+
 .wrapper {
   scroll-behavior: smooth;
   height: 100vh;
@@ -86,8 +90,16 @@ a {
   font-weight: 500;
 }
 .main-coffeCount2 {
-  background-color: rgba(180, 180, 180, 0.9);
+  background-color: rgba(210, 210, 210, 0.4);
+  padding: 5px 10px;
+  font-size: 18px;
+  z-index: 1;
+  margin-bottom: 10px;
 }
 .main-coffeCount2-text {
   font-weight: 500;
+}
+.main-countButton {
+  display: flex;
+  flex-direction: row;
 }
