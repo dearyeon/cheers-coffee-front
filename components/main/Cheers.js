@@ -6,13 +6,8 @@ function Cheers({ count, setCount }) {
     if (action == "minus" && count > 1) setCount(count - 1);
   };
   return (
-    <div className="contentWrapper">
-      <div className="cheers-ment">
-        Oh my... 지친 개발자 {count}에게
-        <br />
-        커피를 사주는 당신의 눈동자에
-        <br />치 ★ 얼 ☆ 쓰 -
-      </div>
+    <div className="contentWrapper cheers">
+      <div className="ment cheers">{ment(count)}</div>
       <div className="cheers-content">
         <img className="cheers-icon" src="img/cheers_test.png" />
         <div className="cheers-coffeCount1">
@@ -41,5 +36,13 @@ function Cheers({ count, setCount }) {
     </div>
   );
 }
+
+const ment = (count) =>
+  `Oh my... 지친 개발자 ` +
+  count +
+  `에게
+커피를 사주는 당신의 눈동자에
+치 ★ 얼 ☆ 쓰 -
+`;
 
 export default Cheers;

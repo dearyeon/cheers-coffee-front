@@ -50,11 +50,16 @@ a {
   position: relative;
   height: 100%;
   width: 100%;
+}
+.contentWrapper.cheers {
   background-color: lightyellow;
 }
-.cheers-ment {
+.ment {
   font-weight: 600;
   font-size: 18px; /*반*/
+  white-space: pre-wrap;
+}
+.ment.cheers {
   text-align: center;
   z-index: 1;
   position: absolute;
@@ -109,4 +114,19 @@ a {
 .cheers-registerButton {
   position: absolute;
   bottom: 15px;
+}
+
+.please-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.please-inner {
+  padding-left: 15vw;
+}
+.please-icon {
+  height: 350px;
+  width: 350px;
 }
