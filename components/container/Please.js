@@ -4,7 +4,7 @@ import ScrollIcon from "../common/ScrollIcon";
 function Please() {
   return (
     <div className="contentWrapper">
-      <div className="please-content">
+      <div className="row-content">
         <img className="please-icon" src="img/please_icon.png" />
         <div className="please-inner">
           <div className="ment" style={{ paddingBottom: "50px" }}>
