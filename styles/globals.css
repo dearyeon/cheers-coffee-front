@@ -42,14 +42,17 @@ a {
   /*align-items: center;*/
 }
 
-.main-contentWrapper {
+.contentWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: lightyellow;
 }
-.main-ment {
+.cheers-ment {
   font-weight: 600;
   font-size: 18px; /*반*/
   text-align: center;
@@ -57,7 +60,7 @@ a {
   position: absolute;
   margin-bottom: 400px;
 }
-.main-content {
+.cheers-content {
   display: flex;
   flex-direction: column;
   height: 400px; /*반*/
@@ -67,7 +70,7 @@ a {
   align-items: center;
   position: relative;
 }
-.main-coffeCount1 {
+.cheers-coffeCount1 {
   display: flex;
   flex-direction: row;
   z-index: 1;
@@ -83,27 +86,27 @@ a {
   width: 110px; /*반*/
   z-index: 1;
 }
-.main-coffeCount1-text {
+.cheers-coffeCount1-text {
   align-items: center;
   display: flex;
   font-size: 45px;
   font-weight: 500;
 }
-.main-coffeCount2 {
+.cheers-coffeCount2 {
   background-color: rgba(210, 210, 210, 0.4);
   padding: 5px 10px;
   font-size: 18px;
   z-index: 1;
   margin-bottom: 10px;
 }
-.main-coffeCount2-text {
+.cheers-coffeCount2-text {
   font-weight: 500;
 }
-.main-countButton {
+.cheers-countButton {
   display: flex;
   flex-direction: row;
 }
-.main-registerButton {
+.cheers-registerButton {
   position: absolute;
   bottom: 15px;
 }

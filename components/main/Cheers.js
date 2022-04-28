@@ -6,25 +6,25 @@ function Cheers({ count, setCount }) {
     if (action == "minus" && count > 1) setCount(count - 1);
   };
   return (
-    <div className="main-contentWrapper">
-      <div className="main-ment">
+    <div className="contentWrapper">
+      <div className="cheers-ment">
         Oh my... 지친 개발자 {count}에게
         <br />
         커피를 사주는 당신의 눈동자에
         <br />치 ★ 얼 ☆ 쓰 -
       </div>
-      <div className="main-content">
+      <div className="cheers-content">
         <img className="cheers-icon" src="img/cheers_test.png" />
-        <div className="main-coffeCount1">
+        <div className="cheers-coffeCount1">
           <img className="coffee-icon" src="img/coffee_test.png" />
-          <div className="main-coffeCount1-text">X {count}</div>
+          <div className="cheers-coffeCount1-text">X {count}</div>
         </div>
-        <div className="main-coffeCount2">
-          <div className="main-coffeCount2-text">
+        <div className="cheers-coffeCount2">
+          <div className="cheers-coffeCount2-text">
             {count}커피 = {(0.01 * count).toFixed(2)}ether
           </div>
         </div>
-        <div className="main-countButton">
+        <div className="cheers-countButton">
           <Button
             text="−"
             color="lightskyblue"
@@ -34,7 +34,7 @@ function Cheers({ count, setCount }) {
           <Button text={count} wide />
           <Button text="+" color="pink" icon onClick={() => calCount("plus")} />
         </div>
-        <div className="main-registerButton">
+        <div className="cheers-registerButton">
           <Button text="커피로 응원하기" wide />
         </div>
       </div>

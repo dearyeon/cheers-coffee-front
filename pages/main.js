@@ -7,7 +7,7 @@ function Main() {
 
   return (
     <div className="wrapper">
-      <div className="container" style={{ background: "lightgray" }}>
+      <div className="container">
         <Cheers count={count} setCount={setCount} />
       </div>
       <div className="container">2페이지</div>
