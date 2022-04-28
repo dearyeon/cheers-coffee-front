@@ -4,12 +4,14 @@ import useSWR from 'swr';
 
 import { useWeb3React } from '@web3-react/core';
 import { InjectedConnector } from '@web3-react/injected-connector';
+import { ethers } from 'ethers';
+import donateABI from '../abi/Donate_abi.json';
 
 const ConnectWallet = () => {
   // supportedChainIds: 접속할 서버들
   // https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/
   // 1: Mainnet (Production), 3: Ropsten (Test), 4: Rinkeby (Test), 5: Georli (Test), 42: Kovan (Test)
-  const injectedConnector = new InjectedConnector({ supportedChainIds: [1, 3, 4, 5, 42] });
+  const injectedConnector = new InjectedConnector({ supportedChainIds: [1, 3] });
 
   // useWeb3React: @web3-react에서 제공하는 훅
   // chainId: 현재 지갑에 연결된 체인 Id
@@ -88,6 +90,32 @@ const ConnectWallet = () => {
     return <div>Balance: Ξ {balance / 1e18}</div>;
   }
 
+  const handleClickDonate = async () => {
+    try {
+      const { ethereum } = window;
+
+      if (ethereum) {
+        console.log(donateABI)
+        const contract = new ethers.Contract(
+          "0x644b70F2E6Bf58B27B5aD5C2bbdd496Ba4482226", 
+          donateABI.abi,
+          library
+        );
+
+        console.log("Initialize");
+        let txn = await contract.getRegistered("goldfish", {});
+
+        // console.log("waiting...");
+        // await txn.wait();
+
+        console.log("mining ended");
+        console.log(txn);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
   return (
     <div>
       <div>ChainId: {chainId}</div>
@@ -101,6 +129,9 @@ const ConnectWallet = () => {
           Connect Connect
         </button>
       )}
+      <button onClick={handleClickDonate}>
+        Call Donate
+      </button>
     </div>
   );
 };
