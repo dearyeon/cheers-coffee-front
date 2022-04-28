@@ -1,4 +1,5 @@
 import Button from "../common/Button";
+import ScrollIcon from "../common/ScrollIcon";
 
 function Please() {
   return (
@@ -12,14 +13,13 @@ function Please() {
           <Button text="저도 응원받고 싶은 개발자에요!" radius />
         </div>
       </div>
+      <ScrollIcon />
     </div>
   );
 }
 
 const ment = (name) =>
-  `이 개발자 ` +
-  name +
-  `는
+  `이 개발자 ${name}는
 당신의 커피가 간절히 필요합니다.
 
 이 개발자의 소매에 커피을 넣어주세요.

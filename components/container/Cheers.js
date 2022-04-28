@@ -1,3 +1,5 @@
+import WrapContainer from "../common/WrapContainer";
+import ScrollIcon from "../common/ScrollIcon";
 import Button from "../common/Button";
 
 function Cheers({ count, setCount }) {
@@ -33,16 +35,16 @@ function Cheers({ count, setCount }) {
           <Button text="커피로 응원하기" wide />
         </div>
       </div>
+
+      <ScrollIcon />
     </div>
   );
 }
 
 const ment = (count) =>
-  `Oh my... 지친 개발자 ` +
-  count +
-  `에게
+  `Oh my... 지친 개발자 ${count}에게
 커피를 사주는 당신의 눈동자에
 치 ★ 얼 ☆ 쓰 -
 `;
 
-export default Cheers;
+export default WrapContainer(Cheers);
