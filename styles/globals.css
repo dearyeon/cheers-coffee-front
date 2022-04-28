@@ -66,8 +66,8 @@ a {
   color: white;
 }
 .ment {
-  font-weight: 600;
-  font-size: 18px; /*반*/
+  font-weight: 700;
+  font-size: 20px; /*반*/
   white-space: pre-wrap;
 }
 .ment.cheers {
@@ -135,11 +135,12 @@ a {
   position: relative;
 }
 .please-inner {
-  padding-left: 15vw;
+  padding-left: 12vw;
 }
 .please-icon {
   height: 350px;
   width: 350px;
+  padding: 20px;
 }
 
 .credit-title {
@@ -152,7 +153,7 @@ a {
   align-items: center;
   padding: 80px;
 }
-.credit-icon {
+.large-icon {
   height: 300px;
   width: 300px;
 }
@@ -171,4 +172,25 @@ a {
   padding: 10px;
   white-space: pre-wrap;
   text-align: center;
+}
+
+.join-text {
+  font-size: 25px;
+  font-weight: 600;
+  padding: 10px;
+}
+.join-check {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+.join-input {
+  border-radius: 10px;
+  height: 70px;
+  width: 300px;
+  font-size: 25px;
+  font-weight: 500;
+  border: 1px solid lightgray;
+  background: rgba(196, 196, 196, 0.1);
+  padding: 10px;
 }
