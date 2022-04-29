@@ -8,14 +8,14 @@ function Join() {
       <div className="join-text">커피가 필요한 개발자세요?</div>
       <div className="join-check">
         <input
-          className="join-input"
+          className="join-input radius"
           type="text"
           placeholder="이름을 입력해주세요"
           required
         />
-        <Button text="중복조회" radius />
+        <Button text="중복조회" className="radius" />
       </div>
-      <Button text="등록하기" wide />
+      <Button text="등록하기" className="join-button radius" />
     </div>
   );
 }
