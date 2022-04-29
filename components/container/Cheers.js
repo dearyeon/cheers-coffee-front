@@ -23,16 +23,19 @@ function Cheers({ count, setCount }) {
         </div>
         <div className="cheers-countButton">
           <Button
+            className="button-icon lightskyblue"
             text="−"
-            color="lightskyblue"
-            icon
             onClick={() => calCount("minus")}
           />
-          <Button text={count} wide />
-          <Button text="+" color="pink" icon onClick={() => calCount("plus")} />
+          <Button text={count} className="wide" />
+          <Button
+            text="+"
+            className="button-icon pink"
+            onClick={() => calCount("plus")}
+          />
         </div>
         <div className="cheers-registerButton">
-          <Button text="커피로 응원하기" wide />
+          <Button text="커피로 응원하기" className="wide" />
         </div>
       </div>
 

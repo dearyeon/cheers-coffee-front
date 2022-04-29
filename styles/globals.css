@@ -19,6 +19,31 @@ a {
   --test: pink;
 }
 
+.button-wrapper {
+  border: none;
+  padding: 15px 25px;
+  font-size: 20px; /*반*/
+  font-weight: 600;
+  background: lightgray;
+  z-index: 1;
+}
+.button-icon {
+  padding: 0px 10px;
+  font-size: 35px;
+}
+.wide {
+  padding: 12px 50px;
+}
+.radius {
+  border-radius: 15px;
+}
+.pink {
+  background-color: pink;
+}
+.lightskyblue {
+  background-color: lightskyblue;
+}
+
 .wrapper {
   scroll-behavior: smooth;
   height: 100vh;
@@ -193,4 +218,7 @@ a {
   border: 1px solid lightgray;
   background: rgba(196, 196, 196, 0.1);
   padding: 10px;
+}
+.join-input::-webkit-input-placeholder {
+  color: rgb(180, 180, 180);
 }

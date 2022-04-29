@@ -10,7 +10,7 @@ function Please() {
           <div className="ment" style={{ paddingBottom: "50px" }}>
             {ment("name")}
           </div>
-          <Button text="저도 응원받고 싶은 개발자에요!" radius />
+          <Button className="radius" text="저도 응원받고 싶은 개발자에요!" />
         </div>
       </div>
       <ScrollIcon />
