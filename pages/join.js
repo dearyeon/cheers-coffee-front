@@ -6,7 +6,7 @@ function Join() {
   const [isGood, setIsGood] = React.useState(true);
   return (
     <div className="contentWrapper">
-      <img className="please-icon" src="img/please_icon.png" />
+      <img className="please-icon" src="img/please.png" />
       {isGood ? (
         <>
           <div className="join-text">커피가 필요한 개발자세요?</div>

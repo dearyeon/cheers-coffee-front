@@ -13,7 +13,7 @@ function Cheers({ count, setCount }) {
       <div className="cheers-content">
         <img className="cheers-icon" src="img/cheers_test.png" />
         <div className="cheers-coffeCount1">
-          <img className="coffee-icon" src="img/coffee_test.png" />
+          <img className="coffee-icon" src="img/coffee.png" />
           <div className="cheers-coffeCount1-text">X {count}</div>
         </div>
         <div className="cheers-coffeCount2">

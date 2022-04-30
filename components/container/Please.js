@@ -5,7 +5,7 @@ function Please() {
   return (
     <div className="contentWrapper">
       <div className="row-content">
-        <img className="please-icon" src="img/please_icon.png" />
+        <img className="please-icon" src="img/please.png" />
         <div className="please-inner">
           <div className="ment" style={{ paddingBottom: "50px" }}>
             {ment("name")}
