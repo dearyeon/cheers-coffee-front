@@ -203,12 +203,13 @@ a {
   font-size: 25px;
   font-weight: 600;
   padding: 10px;
+  text-align: center;
+  white-space: pre-wrap;
 }
 .join-check {
   display: flex;
   flex-direction: row;
   padding: 25px;
-  margin-bottom: 40px;
 }
 .join-input {
   font-size: 25px;
@@ -219,8 +220,11 @@ a {
   margin-right: 20px;
 }
 .join-input::-webkit-input-placeholder {
-  color: rgb(180, 180, 180);
+  color: rgb(95, 42, 42);
 }
 .join-button {
-  padding: 20px 120px;
+  margin-top: 40px;
+  padding: 20px 50px;
+  min-width: 320px;
+  font-weight: 700;
 }
