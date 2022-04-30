@@ -1,7 +1,9 @@
+import { useRouter } from "next/router";
 import Button from "../common/Button";
 import ScrollIcon from "../common/ScrollIcon";
 
 function Please() {
+  const router = useRouter();
   return (
     <div className="contentWrapper">
       <div className="row-content">
@@ -10,7 +12,11 @@ function Please() {
           <div className="ment" style={{ paddingBottom: "50px" }}>
             {ment("name")}
           </div>
-          <Button className="radius" text="저도 응원받고 싶은 개발자에요!" />
+          <Button
+            className="radius"
+            text="저도 응원받고 싶은 개발자에요!"
+            onClick={() => router.push("/join")}
+          />
         </div>
       </div>
       <ScrollIcon />
