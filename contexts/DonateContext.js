@@ -48,16 +48,24 @@ function DonateProvider({ children }) {
 
   useEffect(() => {
     console.log(contract)
-  }, [contract])
+  }, [contract]);
 
-  const getRegistered = async (name) => {
+  function checkNull() {
     if (contract === null) {
       console.error("contract is null!");
-      return;
+      return true;
     }
 
     if (account === null) {
       console.error("account is null!");
+      return true;
+    }
+
+    return false;
+  }
+
+  const getRegistered = async (name) => {
+    if (checkNull()) {
       return;
     }
 
@@ -73,13 +81,7 @@ function DonateProvider({ children }) {
   }
 
   const donate = async (name, ether) => {
-    if (contract === null) {
-      console.error("contract is null!");
-      return;
-    }
-
-    if (account === null) {
-      console.error("account is null!");
+    if (checkNull()) {
       return;
     }
 
@@ -90,8 +92,20 @@ function DonateProvider({ children }) {
     }
   }
 
+  const register = async (name) => {
+    if (checkNull()) {
+      return;
+    }
+
+    try {
+      const ret = await contract.register(name, account, {});
+    } catch(err) {
+      console.error(err);
+    }
+  }
+
   return (
-    <Provider value={{ getRegistered, donate }}>
+    <Provider value={{ getRegistered, donate, register }}>
       {children}
     </Provider>
   );

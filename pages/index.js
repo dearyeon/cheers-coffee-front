@@ -7,7 +7,8 @@ import { useDonate } from '../contexts/DonateContext';
 const ConnectWallet = () => {
   const { connectWallet } = useWallet();
   const { chainId, account, active, library } = useWeb3React();
-  const { getRegistered, donate } = useDonate();
+  const { getRegistered, donate, register } = useDonate();
+  const [newName, setNewName] = useState("");
 
   // balance: 현재 자산을 기록하는 스테이트.
   const [balance, setBalance] = useState("");
@@ -45,6 +46,12 @@ const ConnectWallet = () => {
       <button type="button" onClick={() => donate("goldfish", 1 * 1e12)}>
         Donate
       </button>
+      <div>
+        <input value={newName} onChange={e => setNewName(e.target.value)} />
+        <button type="button" onClick={() => register(newName)}>
+          Register
+        </button>
+      </div>
     </div>
   );
 };
