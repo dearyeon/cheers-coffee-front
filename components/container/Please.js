@@ -15,7 +15,7 @@ function Please() {
           <Button
             className="radius"
             text="저도 응원받고 싶은 개발자에요!"
-            onClick={() => router.push("/join")}
+            onClick={() => router.push("/register")}
           />
         </div>
       </div>

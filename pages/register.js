@@ -2,7 +2,7 @@ import * as React from "react";
 import WrapContainer from "../components/common/WrapContainer";
 import Button from "../components/common/Button";
 
-function Join() {
+function Register() {
   const [isGood, setIsGood] = React.useState(true);
   return (
     <div className="contentWrapper">
@@ -41,4 +41,4 @@ function Join() {
   );
 }
 
-export default WrapContainer(Join);
+export default WrapContainer(Register);
