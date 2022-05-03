@@ -34,11 +34,9 @@ const ConnectWallet = () => {
       {active ? (
         <div>✅ </div>
       ) : (
-        <>
-          <button type="button" onClick={connectWallet}>
-            Connect Connect
-          </button>
-        </>
+        <button type="button" onClick={connectWallet}>
+          Connect Connect
+        </button>
       )}
       <button type="button" onClick={() => getRegistered("goldfish")}>
         Check Goldfish Exist
