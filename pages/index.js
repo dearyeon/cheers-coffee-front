@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useWallet } from "../contexts/WalletContext";
 import { useWeb3React } from "@web3-react/core";
 import { useDonate } from "../contexts/DonateContext";
-import { Router, useRouter } from "next/router";
 
 const ConnectWallet = () => {
   const { connectWallet } = useWallet();
@@ -25,6 +24,7 @@ const ConnectWallet = () => {
     library?.getBalance(account).then((result) => {
       setBalance(result / 1e18);
     });
+    console.log(connectWallet);
   });
 
   return (
