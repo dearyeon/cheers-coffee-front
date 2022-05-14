@@ -1,8 +1,8 @@
-import styles from '../styles/Home.module.css';
-import { useEffect, useState } from 'react';
-import { useWallet } from '../contexts/WalletContext';
-import { useWeb3React } from '@web3-react/core';
-import { useDonate } from '../contexts/DonateContext';
+import styles from "../styles/Home.module.css";
+import { useEffect, useState } from "react";
+import { useWallet } from "../contexts/WalletContext";
+import { useWeb3React } from "@web3-react/core";
+import { useDonate } from "../contexts/DonateContext";
 
 const ConnectWallet = () => {
   const { connectWallet } = useWallet();
@@ -45,7 +45,7 @@ const ConnectWallet = () => {
         Donate
       </button>
       <div>
-        <input value={newName} onChange={e => setNewName(e.target.value)} />
+        <input value={newName} onChange={(e) => setNewName(e.target.value)} />
         <button type="button" onClick={() => register(newName)}>
           Register
         </button>

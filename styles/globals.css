@@ -14,3 +14,217 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --test: pink;
+}
+
+.button-wrapper {
+  border: none;
+  padding: 15px 25px;
+  font-size: 20px; /*반*/
+  font-weight: 600;
+  background: lightgray;
+  z-index: 1;
+}
+.button-icon {
+  padding: 0px 10px;
+  font-size: 35px;
+}
+.wide {
+  padding: 12px 50px;
+}
+.radius {
+  border-radius: 15px;
+}
+.pink {
+  background-color: pink;
+}
+.lightskyblue {
+  background-color: lightskyblue;
+}
+
+.wrapper {
+  scroll-behavior: smooth;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  /*scroll-padding-top: 10px;*/
+  overflow-y: scroll;
+}
+.wrapper::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+.wrapper > div {
+  scroll-snap-align: start;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  /*align-items: center;*/
+}
+.scroll-icon {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 50px;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.contentWrapper.cheers {
+  background-color: lightyellow;
+}
+.contentWrapper.credit {
+  background-color: gray;
+  color: white;
+}
+.ment {
+  font-weight: 700;
+  font-size: 20px; /*반*/
+  white-space: pre-wrap;
+}
+.ment.cheers {
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  margin-bottom: 400px;
+}
+.cheers-content {
+  display: flex;
+  flex-direction: column;
+  height: 400px; /*반*/
+  width: 400px; /*반*/
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.cheers-coffeCount1 {
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+}
+.cheers-icon {
+  height: 100%; /*반*/
+  width: 100%; /*반*/
+  position: absolute;
+  z-index: 0;
+}
+.coffee-icon {
+  height: 150px; /*반*/
+  width: 110px; /*반*/
+  z-index: 1;
+}
+.cheers-coffeCount1-text {
+  align-items: center;
+  display: flex;
+  font-size: 45px;
+  font-weight: 500;
+}
+.cheers-coffeCount2 {
+  background-color: rgba(210, 210, 210, 0.4);
+  padding: 5px 10px;
+  font-size: 18px;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+.cheers-coffeCount2-text {
+  font-weight: 500;
+}
+.cheers-countButton {
+  display: flex;
+  flex-direction: row;
+}
+.cheers-registerButton {
+  position: absolute;
+  bottom: 15px;
+}
+
+.row-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.please-inner {
+  padding-left: 12vw;
+}
+.please-icon {
+  height: 350px;
+  width: 350px;
+  padding: 20px;
+}
+
+.credit-title {
+  font-size: 40px;
+  font-weight: 700;
+}
+.credit-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px;
+}
+.large-icon {
+  height: 300px;
+  width: 300px;
+}
+.credit-name {
+  font-size: 30px;
+  font-weight: 600;
+  padding: 20px;
+}
+.credit-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+.credit-text.credit-contact {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  white-space: pre-wrap;
+  text-align: center;
+}
+
+.join-text {
+  font-size: 25px;
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+  white-space: pre-wrap;
+}
+.join-check {
+  display: flex;
+  flex-direction: row;
+  padding: 25px;
+}
+.join-input {
+  font-size: 25px;
+  font-weight: 500;
+  border: 1px solid lightgray;
+  background: rgba(196, 196, 196, 0.1);
+  padding: 20px;
+  margin-right: 20px;
+}
+.join-input::-webkit-input-placeholder {
+  color: rgb(95, 42, 42);
+}
+.join-button {
+  margin-top: 40px;
+  padding: 20px 50px;
+  min-width: 320px;
+  font-weight: 700;
+}
