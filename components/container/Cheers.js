@@ -11,7 +11,7 @@ function Cheers({ count, setCount }) {
     <div className="contentWrapper cheers">
       <div className="ment cheers">{ment(count)}</div>
       <div className="cheers-content">
-        <img className="cheers-icon" src="img/cheers_test.png" />
+        <img className="cheers-icon" src="img/cheers.png" />
         <div className="cheers-coffeCount1">
           <img className="coffee-icon" src="img/coffee.png" />
           <div className="cheers-coffeCount1-text">X {count}</div>

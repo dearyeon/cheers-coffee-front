@@ -1,13 +1,22 @@
 @font-face {
-  font-family: 'samlip';
-  src: url('../public/SDSamliphopangcheTTFOutline.ttf');
+  font-family: "HSYuji-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSYuji-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'samlip', sans-serif;
 }
 
 a {
@@ -98,19 +107,20 @@ a {
   font-weight: 700;
   font-size: 20px; /*반*/
   white-space: pre-wrap;
+  font-family: "HSYuji-Regular";
 }
 .ment.cheers {
   text-align: center;
   z-index: 1;
   position: absolute;
-  margin-bottom: 400px;
+  margin-bottom: 450px;
 }
 .cheers-content {
   display: flex;
   flex-direction: column;
   height: 400px; /*반*/
-  width: 400px; /*반*/
-  background-color: white;
+  width: 520px; /*반*/
+  background: none;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -125,10 +135,11 @@ a {
   width: 100%; /*반*/
   position: absolute;
   z-index: 0;
+  opacity: 0.8;
 }
 .coffee-icon {
-  height: 150px; /*반*/
-  width: 110px; /*반*/
+  height: 120px; /*반*/
+  width: 150px; /*반*/
   z-index: 1;
 }
 .cheers-coffeCount1-text {
