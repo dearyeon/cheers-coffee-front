@@ -31,7 +31,6 @@ function DonateProvider({ children }) {
 
   useEffect(() => {
     if (window !== undefined && window.ethereum !== null && window.ethereum !== undefined) {
-      console.log(signer)
       try {
         const newContract = new ethers.Contract(
           "0x644b70F2E6Bf58B27B5aD5C2bbdd496Ba4482226", 
@@ -45,10 +44,6 @@ function DonateProvider({ children }) {
       }
     }
   }, [account, signer]);
-
-  useEffect(() => {
-    console.log(contract)
-  }, [contract]);
 
   function checkNull() {
     if (contract === null) {
