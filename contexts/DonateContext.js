@@ -66,18 +66,19 @@ function DonateProvider({ children }) {
 
   const getRegistered = async (name) => {
     if (checkNull()) {
-      return;
+      throw 'contract or account is null';
     }
 
     try {
       let address = await contract.getRegistered(name, {});
 
-      return address !== 0;
+      const emptyAddress = /^0x0+$/.test(address);
+
+      return !emptyAddress;
     } catch(err) {
       console.error(err);
+      throw err;
     }
-
-    return false;
   }
 
   const donate = async (name, ether) => {
