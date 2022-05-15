@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <title>치얼-쓰 커피</title>
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Web3ReactProvider getLibrary={getLibrary}>
