@@ -4,6 +4,7 @@ import Button from "../components/common/Button";
 
 function Register() {
   const [isGood, setIsGood] = React.useState(true);
+
   return (
     <div className="contentWrapper">
       <img className="please-icon" src="img/please.png" />

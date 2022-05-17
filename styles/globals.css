@@ -39,6 +39,7 @@ a {
   font-weight: 600;
   background: lightgray;
   z-index: 1;
+  cursor: pointer;
 }
 .button-icon {
   padding: 0px 10px;
