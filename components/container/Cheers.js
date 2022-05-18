@@ -2,18 +2,24 @@ import WrapContainer from "../common/WrapContainer";
 import ScrollIcon from "../common/ScrollIcon";
 import Button from "../common/Button";
 
-function Cheers({ count, setCount }) {
+function Cheers({ name, count, setCount }) {
   const calCount = (action) => {
     if (action == "plus" && count < 100) setCount(count + 1);
     if (action == "minus" && count > 1) setCount(count - 1);
   };
+
+  const ment = `Oh my... 지친 개발자 ${name}에게
+  커피를 사주는 당신의 눈동자에
+  치 ★ 얼 ☆ 쓰 -
+  `;
+
   return (
     <div className="contentWrapper cheers">
-      <div className="ment cheers">{ment(count)}</div>
+      <div className="ment cheers">{ment}</div>
       <div className="cheers-content">
-        <img className="cheers-icon" src="img/cheers.png" />
+        <img className="cheers-icon" src="../img/cheers.png" />
         <div className="cheers-coffeCount1">
-          <img className="coffee-icon" src="img/coffee.png" />
+          <img className="coffee-icon" src="../img/coffee.png" />
           <div className="cheers-coffeCount1-text">X {count}</div>
         </div>
         <div className="cheers-coffeCount2">
@@ -43,11 +49,5 @@ function Cheers({ count, setCount }) {
     </div>
   );
 }
-
-const ment = (count) =>
-  `Oh my... 지친 개발자 ${count}에게
-커피를 사주는 당신의 눈동자에
-치 ★ 얼 ☆ 쓰 -
-`;
 
 export default WrapContainer(Cheers);

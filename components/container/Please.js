@@ -7,7 +7,7 @@ function Please() {
   return (
     <div className="contentWrapper">
       <div className="row-content">
-        <img className="please-icon" src="img/please.png" />
+        <img className="please-icon" src="../img/please.png" />
         <div className="please-inner">
           <div className="ment" style={{ paddingBottom: "50px" }}>
             {ment("name")}
@@ -15,7 +15,7 @@ function Please() {
           <Button
             className="radius"
             text="저도 응원받고 싶은 개발자에요!"
-            onClick={() => router.push("/register")}
+            onClick={() => router.push("/")}
           />
         </div>
       </div>
