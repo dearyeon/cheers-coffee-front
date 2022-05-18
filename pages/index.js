@@ -1,74 +1,47 @@
-import styles from "../styles/Home.module.css";
-import { useEffect, useState } from "react";
-import { useWallet } from "../contexts/WalletContext";
-import { useWeb3React } from "@web3-react/core";
-import { useDonate } from "../contexts/DonateContext";
-import { useRouter } from "next/router";
+import * as React from "react";
+import WrapContainer from "../components/common/WrapContainer";
+import Button from "../components/common/Button";
 
-const ConnectWallet = () => {
-  const { connectWallet } = useWallet();
-  const { chainId, account, active, library } = useWeb3React();
-  const { getRegistered, donate, register } = useDonate();
-  const [newName, setNewName] = useState("");
-  const router = useRouter();
+function Register() {
+  const [isAble, setIsAble] = React.useState(false);
+  const [id, setId] = React.useState("");
+  const [ment, setMent] = React.useState("");
 
-  // balance: 현재 자산을 기록하는 스테이트.
-  const [balance, setBalance] = useState("");
-
-  // TODO: Delete
-  useEffect(() => {
-    // 스테이트 업데이트 될 때마다 상태 로깅
-    // console.log(chainId, account, active);
-  });
-
-  useEffect(() => {
-    // 주기적으로 잔고를 가져옴.
-    library?.getBalance(account).then((result) => {
-      setBalance(result / 1e18);
-    });
-  });
-
-  useEffect(() => {
-    //if (active) router.push("/main");
-  });
+  const checkingConditon = () => {
+    const regex = /^[a-z0-9+]{2,8}$/;
+    if (regex.test(id)) {
+      setMent("");
+      setIsAble(true);
+    } else setMent("2~8자의 영어 소문자, 숫자만 사용 가능합니다.");
+  };
+  const checkingUser = () => {
+    if (!isAble) setMent("중복을 체크해주세요.");
+    //else => 가입완료
+  };
 
   return (
-    <div>
-      <div>ChainId: {chainId}</div>
-      <div>Account: {account}</div>
-      <div>Balance: {balance}</div>
-      {active ? (
-        <div>✅ </div>
-      ) : (
-        <button type="button" onClick={connectWallet}>
-          Connect Connect
-        </button>
-      )}
-      <button type="button" onClick={() => getRegistered("goldfish")}>
-        Check Goldfish Exist
-      </button>
-      <button type="button" onClick={() => donate("goldfish", 1 * 1e12)}>
-        Donate
-      </button>
-      <div>
-        <input value={newName} onChange={(e) => setNewName(e.target.value)} />
-        <button type="button" onClick={() => register(newName)}>
-          Register
-        </button>
+    <div className="contentWrapper">
+      <img className="please-icon" src="img/please.png" />
+      <div className="join-text">커피가 필요한 개발자세요?</div>
+      <div className="join-check">
+        <input
+          className="join-input radius"
+          type="text"
+          value={id}
+          onChange={(e) => setId(e.target.value)}
+          placeholder="이름을 입력해주세요"
+          required
+        />
+        <Button text="중복조회" className="radius" onClick={checkingConditon} />
       </div>
+      <div className="text-red">{ment}</div>
+      <Button
+        text="등록하기"
+        className="join-button radius"
+        onClick={checkingUser}
+      />
     </div>
   );
-};
+}
 
-const Home = () => {
-  return (
-    <div>
-      <main className={styles.main}>
-        <h2>Welcome to playground</h2>
-        <ConnectWallet />
-      </main>
-    </div>
-  );
-};
-
-export default Home;
+export default WrapContainer(Register);
