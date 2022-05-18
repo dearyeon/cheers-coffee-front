@@ -57,6 +57,9 @@ a {
 .lightskyblue {
   background-color: lightskyblue;
 }
+.text-red {
+  color: red;
+}
 
 .wrapper {
   scroll-behavior: smooth;

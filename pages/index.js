@@ -3,12 +3,14 @@ import { useEffect, useState } from "react";
 import { useWallet } from "../contexts/WalletContext";
 import { useWeb3React } from "@web3-react/core";
 import { useDonate } from "../contexts/DonateContext";
+import { useRouter } from "next/router";
 
 const ConnectWallet = () => {
   const { connectWallet } = useWallet();
   const { chainId, account, active, library } = useWeb3React();
   const { getRegistered, donate, register } = useDonate();
   const [newName, setNewName] = useState("");
+  const router = useRouter();
 
   // balance: 현재 자산을 기록하는 스테이트.
   const [balance, setBalance] = useState("");
@@ -24,6 +26,10 @@ const ConnectWallet = () => {
     library?.getBalance(account).then((result) => {
       setBalance(result / 1e18);
     });
+  });
+
+  useEffect(() => {
+    //if (active) router.push("/main");
   });
 
   return (
