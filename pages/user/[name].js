@@ -7,6 +7,7 @@ import Please from "../../components/container/Please";
 import Credit from "../../components/container/Credit";
 import Button from "../../components/common/Button";
 import { useDonate } from '../../contexts/DonateContext';
+import Waiting from '../../components/common/Waiting';
 
 const UserPage = () => {
   const router = useRouter()
@@ -38,18 +39,20 @@ const UserPage = () => {
   
   const { data: isRegistered } = useSWR(name, fetcher);
 
-  const state = useMemo(() => {
-    if (!userChecked) {
-      return 'wait';
-    }
+  // const state = useMemo(() => {
+  //   if (!userChecked) {
+  //     return 'wait';
+  //   }
 
-    return isRegistered ? 'user' : 'notfound'
-  }, [userChecked, isRegistered])
+  //   return isRegistered ? 'user' : 'notfound'
+  // }, [userChecked, isRegistered])
+
+  const state = 'wait'
 
   return (
     <>
       {state === 'wait' && (
-        <>please wait</>
+        <Waiting />
       )}
       {state === 'user' && (
         <div className="wrapper">
