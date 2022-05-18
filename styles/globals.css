@@ -60,6 +60,9 @@ a {
 .text-red {
   color: red;
 }
+.text-blue {
+  color: blue;
+}
 
 .wrapper {
   scroll-behavior: smooth;
