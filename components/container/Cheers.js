@@ -33,7 +33,7 @@ function Cheers({ name, count, setCount }) {
             text="−"
             onClick={() => calCount("minus")}
           />
-          <Button text={count} className="wide" />
+          <div>{count}</div>
           <Button
             text="+"
             className="button-icon pink"
