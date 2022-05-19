@@ -94,10 +94,13 @@ function DonateProvider({ children }) {
     }
 
     try {
-      const ret = await contract.register(name, account, {});
+      await contract.register(name, account, {});
+      return true;
     } catch(err) {
       console.error(err);
     }
+
+    return false;
   }
 
   return (
