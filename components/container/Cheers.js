@@ -18,7 +18,7 @@ function Cheers({ name, count, setCount }) {
 
   const handleDonate = () => {
     donate(name, 1e15 * count);
-  }
+  };
 
   return (
     <div className="contentWrapper cheers">
@@ -36,19 +36,23 @@ function Cheers({ name, count, setCount }) {
         </div>
         <div className="cheers-countButton">
           <Button
-            className="button-icon lightskyblue"
-            text="−"
+            className="button-icon lightskyblue test"
+            text="-"
             onClick={() => calCount("minus")}
           />
-          <div>{count}</div>
+          <div className="cheers-count">{count}</div>
           <Button
             text="+"
-            className="button-icon pink"
+            className="button-icon pink test"
             onClick={() => calCount("plus")}
           />
         </div>
         <div className="cheers-registerButton">
-          <Button onClick={handleDonate} text="커피로 응원하기" className="wide" />
+          <Button
+            onClick={handleDonate}
+            text="커피로 응원하기"
+            className="wide"
+          />
         </div>
       </div>
 

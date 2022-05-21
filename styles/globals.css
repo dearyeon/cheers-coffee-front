@@ -12,6 +12,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "IM_Hyemin-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 html,
 body {
@@ -44,6 +51,7 @@ a {
 .button-icon {
   padding: 0px 10px;
   font-size: 35px;
+  font-family: "IM_Hyemin-Bold";
 }
 .wide {
   padding: 12px 50px;
@@ -142,7 +150,7 @@ a {
   width: 100%; /*반*/
   position: absolute;
   z-index: 0;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 .coffee-icon {
   height: 120px; /*반*/
@@ -168,6 +176,14 @@ a {
 .cheers-countButton {
   display: flex;
   flex-direction: row;
+}
+.cheers-count {
+  background-color: lightgray;
+  padding: 0px 50px;
+  font-size: 30px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
 }
 .cheers-registerButton {
   position: absolute;

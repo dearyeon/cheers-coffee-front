@@ -6,8 +6,8 @@ import Cheers from "../../components/container/Cheers";
 import Please from "../../components/container/Please";
 import Credit from "../../components/container/Credit";
 import Button from "../../components/common/Button";
-import { useDonate } from '../../contexts/DonateContext';
-import Waiting from '../../components/common/Waiting';
+import { useDonate } from "../../contexts/DonateContext";
+import Waiting from "../../components/common/Waiting";
 
 const UserPage = () => {
   const router = useRouter();
@@ -45,22 +45,23 @@ const UserPage = () => {
     return isRegistered;
   };
 
-  const { data: isRegistered } = useSWR(name, fetcher, { refreshInterval: 300 });
+  const { data: isRegistered } = useSWR(name, fetcher, {
+    refreshInterval: 300,
+  });
 
   const state = useMemo(() => {
+    return "user";
     if (!userChecked) {
-      return 'wait';
+      return "wait";
     }
 
-    return isRegistered ? 'user' : 'notfound'
-  }, [userChecked, isRegistered])
+    return isRegistered ? "user" : "notfound";
+  }, [userChecked, isRegistered]);
 
   return (
     <>
-      {state === 'wait' && (
-        <Waiting />
-      )}
-      {state === 'user' && (
+      {state === "wait" && <Waiting />}
+      {state === "user" && (
         <div className="wrapper">
           <Cheers name={name} count={count} setCount={setCount} />
           <Please />
