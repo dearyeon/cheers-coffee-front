@@ -229,12 +229,18 @@ a {
   font-size: 20px;
   font-weight: 500;
 }
-.credit-text.credit-contact {
+.credit-contact {
+  display: flex;
+  flex-direction: row;
   position: absolute;
   bottom: 0;
-  padding: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+}
+.credit-contact-text {
   white-space: pre-wrap;
   text-align: center;
+  padding-right: 10px;
 }
 
 .join-text {
@@ -265,4 +271,8 @@ a {
   padding: 20px 50px;
   min-width: 320px;
   font-weight: 700;
+}
+
+.mini-icon {
+  height: 35px;
 }

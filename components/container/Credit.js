@@ -14,14 +14,16 @@ function Credit() {
           <div className="credit-text">웹 프론트엔드 개발</div>
         </div>
       </div>
-      <div className="credit-text credit-contact">{contact}</div>
+      <div className="credit-contact">
+        <div className="credit-contact-text credit-text">{contact}</div>
+        <img className="mini-icon" src="../img/github.png" />
+      </div>
     </div>
   );
 }
 
 const contact = `
-Contact: aaa@gmail.com
-all rights served to ???
+Contact: https://github.com/cheers-coffee
 `;
 
 export default Credit;
