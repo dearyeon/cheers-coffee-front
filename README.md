@@ -4,8 +4,7 @@
 
 </div>
 
-**사이트 링크**: https://cheers-coffee-front.vercel.app/<br>
-**등록하기**: https://cheers-coffee-front.vercel.app/register
+**사이트 링크**: https://cheers-coffee-front.vercel.app/
 
 ## 👋 소개 
 
@@ -39,7 +38,7 @@
 </div>
 
 ## 💬 만든 사람들
-|<img src="https://github.com/ImInnocent.png" width="80">|<img src="https://github.com/dearyeon.png" width="80">|
+|<img src="https://github.com/ImInnocent.png" width="80">|<img src="https://user-images.githubusercontent.com/50475196/169682575-715b1fb6-e5b0-42f8-864a-64196e89ecd7.jpg" width="80">|
 |:---:|:---:|
 |[송인호](https://github.com/ImInnocent)|[최연지](https://github.com/dearyeon)|
 |블록체인|프론트엔드|
