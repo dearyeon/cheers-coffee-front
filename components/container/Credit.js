@@ -9,7 +9,7 @@ function Credit() {
           <div className="credit-text">블록체인 개발</div>
         </div>
         <div className="credit-info">
-          <img className="large-icon" src="../img/please.png" />
+          <img className="large-icon" src="../img/yeonji.jpg" />
           <div className="credit-name">최연지</div>
           <div className="credit-text">웹 프론트엔드 개발</div>
         </div>
