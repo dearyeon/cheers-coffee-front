@@ -9,7 +9,7 @@ function Register() {
   const [isAble, setIsAble] = React.useState(false);
   const [id, setId] = React.useState("");
   const [ment, setMent] = React.useState("");
-  const { register, getRegistered } = useDonate()
+  const { register, getRegistered } = useDonate();
 
   const checkingConditon = async () => {
     const regex = /^[a-z0-9+]{2,8}$/;
@@ -17,7 +17,7 @@ function Register() {
     if (regex.test(id)) {
       setMent("확인 중입니다");
 
-      const res = await getRegistered(id)
+      const res = await getRegistered(id);
 
       if (!res) {
         setIsAble(true);
@@ -25,12 +25,11 @@ function Register() {
       } else {
         setMent("이미 있는 아이디입니다.");
       }
-      
     } else {
-      setMent("2~8자의 영어 소문자, 숫자만 사용 가능합니다.")
-    };
+      setMent("2~8자의 영어 소문자, 숫자만 사용 가능합니다.");
+    }
   };
-  
+
   const checkingUser = async () => {
     if (!isAble) {
       setMent("중복을 체크해주세요.");
@@ -45,7 +44,7 @@ function Register() {
 
   return (
     <div className="contentWrapper">
-      <img className="please-icon" src="img/please.png" />
+      <img className="large-icon" src="img/please.png" />
       <div className="join-text">커피가 필요한 개발자세요?</div>
       <div className="join-check">
         <input

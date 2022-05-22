@@ -22,7 +22,43 @@ function Cheers({ name, count, setCount }) {
 
   return (
     <div className="contentWrapper cheers">
-      <div className="ment cheers">{ment}</div>
+      <div className="row-content">
+        <div className="cheers-imgArea">
+          <div className="ment cheers">{ment}</div>
+          <img className="large-icon" src="../img/cheers.png" />
+        </div>
+        <div className="cheers-buttonArea">
+          <div className="cheers-coffeCount1">
+            <img className="coffee-icon" src="../img/coffee.png" />
+            <div className="cheers-coffeCount1-text">X {count}</div>
+          </div>
+          <div className="cheers-coffeCount2">
+            <div className="cheers-coffeCount2-text">
+              {count}커피 = {(0.01 * count).toFixed(2)}ether
+            </div>
+          </div>
+          <div className="cheers-countButton">
+            <Button
+              className="button-icon lightskyblue test"
+              text="-"
+              onClick={() => calCount("minus")}
+            />
+            <div className="cheers-count">{count}</div>
+            <Button
+              text="+"
+              className="button-icon pink test"
+              onClick={() => calCount("plus")}
+            />
+          </div>
+          <Button
+            onClick={handleDonate}
+            text="커피로 응원하기"
+            className="wide"
+          />
+        </div>
+      </div>
+
+      {/*<div className="ment cheers">{ment}</div>
       <div className="cheers-content">
         <img className="cheers-icon" src="../img/cheers.png" />
         <div className="cheers-coffeCount1">
@@ -54,7 +90,7 @@ function Cheers({ name, count, setCount }) {
             className="wide"
           />
         </div>
-      </div>
+  </div>*/}
 
       <ScrollIcon />
     </div>

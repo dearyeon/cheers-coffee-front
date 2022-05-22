@@ -50,6 +50,7 @@ const UserPage = () => {
   });
 
   const state = useMemo(() => {
+    return "user";
     if (!userChecked) {
       return "wait";
     }
