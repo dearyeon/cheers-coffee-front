@@ -8,4 +8,6 @@ const WrapContainer =
     );
   };
 
+WrapContainer.displayName = "Wrap";
+
 export default WrapContainer;
