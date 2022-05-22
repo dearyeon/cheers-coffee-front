@@ -9,9 +9,9 @@ function Please() {
   return (
     <div className="contentWrapper">
       <div className="row-content">
-        <img className="please-icon" src="../img/please.png" />
+        <img className="large-icon" src="../img/please.png" />
         <div className="please-inner">
-          <div className="ment" style={{ paddingBottom: "50px" }}>
+          <div className="ment" style={{ paddingBottom: "8vh" }}>
             {ment(name)}
           </div>
           <Button
